@@ -1,10 +1,13 @@
 import "./App.css";
-import PingTest from "./Components/PingTest";
+import ChoreList from "./Components/Chores";
+import PingTest from "./Components/Tests/PingTest";
+import WorkingTest from "./Components/Tests/WorkingTest";
 
 function App() {
   return (
-    <div>
-      <PingTest></PingTest>
+    <div className="appContainer">
+      <ChoreList></ChoreList>
+      {/* <WorkingTest></WorkingTest> */}
     </div>
   );
 }

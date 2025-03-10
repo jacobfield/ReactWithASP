@@ -1,68 +1,127 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 228, 196, 0.619);
+  color: #2e4d2c; /* Dark green text */
+}
+
+.appContainer {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2e4d2c; /* Dark green text */
+  text-decoration: solid;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.inputForm {
+  height: 2rem;
+  width: 20rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  border-color: #8fbc8f;
+}
+.inputForm::placeholder {
+  color: gray;
+}
+
+.inputForm:hover {
+  border-color: #6b8e23;
+}
+
+.inputForm:focus {
+  border-color: #d0f0c0;
+  outline: none;
+}
+.button {
+  background-color: #d0f0c0;
+  border-color: #8fbc8f;
+  height: 2rem;
+  width: auto;
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+
+.addButton {
+  margin-bottom: 15px;
+}
+
+.choreContainer {
+  width: 800px;
+}
+
+.choreList {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.choreListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: auto; */
+}
+
+.allChores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: auto;
+  width: 100%;
+}
+
+.listItemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  border-color: #8fbc8f;
+}
+
+.button:hover {
+  background-color: #8fbc8f;
+  color: #2e4d2c;
 }

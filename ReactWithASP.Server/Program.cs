@@ -1,8 +1,16 @@
 // Create a WebApplicationBuilder instance with the command-line arguments.
+using Microsoft.EntityFrameworkCore;
+using ReactWithASP.Server.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add the controllers to the services container.
 builder.Services.AddControllers();
+
+// Configure EF Core to use SQL Server.
+builder.Services.AddDbContext<ChoreContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // Add and configure the CORS services.
 builder.Services.AddCors(options =>
