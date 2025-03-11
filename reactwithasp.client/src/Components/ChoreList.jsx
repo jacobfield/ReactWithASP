@@ -31,12 +31,13 @@ export default function ChoreList({
             onClick={() => toggleComplete(chore)}
           >
             <li className="choreListItem" key={chore.id}>
+              • &nbsp;
               <span
                 style={{
                   textDecoration: chore.isCompleted ? "line-through" : "none",
                 }}
               >
-                {chore.title}: {chore.description}
+                {chore.title} {chore.description}
               </span>
             </li>
             <DeleteChores chore={chore} chores={chores} setChores={setChores} />

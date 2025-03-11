@@ -7,7 +7,7 @@ import ChoreList from "./ChoreList";
 
 export default function Chores() {
   const [chores, setChores] = useState(null); // <-- initially null
-  const [newChore, setNewChore] = useState({ title: "", description: "" });
+  const [newChore, setNewChore] = useState({ title: "", description: " " });
   const [loading, setLoading] = useState(true);
 
   // Fetch all chores when the component mounts.
